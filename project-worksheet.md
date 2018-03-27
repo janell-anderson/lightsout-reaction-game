@@ -31,6 +31,8 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ### Landing Page
 What will a player see when they start your game?
+- The title page
+- A prompt will show up to ask for your name
 
 ### Game Initialization
 What will a player see when the game is started? 
@@ -59,7 +61,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Component 1 | H | 10hrs| 12hrs | 12hrs |
+| Landing Page | H | 10hrs| 12hrs | 12hrs |
+| # | H | 10hrs| 12hrs | 12hrs |
+| # | H | 10hrs| 12hrs | 12hrs |
+| # | H | 10hrs| 12hrs | 12hrs |
 | Total |  | 10hrs| 12hrs | 12hrs |
 
 ## Helper Functions
