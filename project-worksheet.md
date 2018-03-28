@@ -30,6 +30,8 @@ So I will be making a quick reaction game. Inspired by both Motorsports racing a
 
 Include images of your wireframes. 
 
+<img src="images/wireframe.jpg">
+
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
