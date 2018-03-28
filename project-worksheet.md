@@ -19,6 +19,13 @@ This schedule will be used to keep track of your progress throughout the week an
 
 Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
 
+So I will be making a quick reaction game. Inspired by both Motorsports racing and reaction time games, I wanted to make my own version. 
+- For the lights here is an example of what I want it to look like: https://f1-start.glitch.me/
+- As for finding out the average I got inspiration from https://www.humanbenchmark.com/tests/reactiontime/
+- The second link does not have a list of your time scores. From what I researched they used satistics based off average (median) reaction time. 
+- I don't want to worry about statistics. I just want to keep it minimal.
+
+
 ## Wireframes
 
 Include images of your wireframes. 
@@ -27,24 +34,51 @@ Include images of your wireframes.
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
 
+- Landing page
+- HTML and CSS of design shell
+- Game logic
+
 ## Game Components
 
 ### Landing Page
 What will a player see when they start your game?
-- The title page
-- A prompt will show up to ask for your name
+
+- The title page.
+- A prompt will show up to ask for your name (Still deciding??)
+- Rules: instructions on how to play the game.
+- A button to enter the main page of the game.
 
 ### Game Initialization
 What will a player see when the game is started? 
 
+- The title of the game. 
+- The player will see five empty circles on the screen. 
+- Below will be two buttons: Play and Reset
+- The play button which will start the the initiate the game
+- A reset button that will reset you stored times.
+- A column for your stored time and average.
+
 ### Playing The Game
-What will be the flow of the game, what will the user be expeted to do and what will the user expect from the gam
+What will be the flow of the game, what will the user be expeted to do and what will the user expect from the game
+
+- The user will be told to press the play button when needed from the rules on the landing page
+- When they press play the lights will turn off and after a certain amount of time they will turn off.
+- When the lights turn off the player must tap/click the screen immediately after. 
+- The faster there reaction time is after the lights turn off the lower the stored number.
+- They will do this either 4 or 5 times there time being stored. 
+- After they complete the needed amount they will get there average time.
+- The user will be expected to try and see how fast they are in reacting to the lights turning off quickly. 
 
 ### Winning The Game
 What does it look like when the game ends, what determines winning or losing?
 
+- I think this is the downside to my game. I do not have a winner or loser.
+- I can only see that happening if I have a second player implemented into the game to check who has the highest average.
+
 ### Game Reset
 How will the user restart the game once it has been completed.
+
+- The player will be able to press/click on the restart button.
 
 ## MVP 
 
