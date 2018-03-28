@@ -115,9 +115,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
+| Game Logic | H | 13 hrs| #hrs | #hrs |
 | Landing Page | M | 2 hrs| #hrs | #hrs |
 | HTML & CSS | M | 3 hrs| #hrs | #hrs |
-| Game Logic | H | 13 hrs| #hrs | #hrs |
 | Total |  | 18hrs| #hrs | #hrs |
 
 ## Helper Functions
