@@ -1,13 +1,30 @@
 $(document).ready(function () {
-  // Create div container for lights
-  var div = $('<div>').attr('id', 'container');
-  $('body').append(div);
+// create enter button for landing page
+  let enterbtn = "#enter";
+  $('enter').click(function() {
+    window.location.href = 'index.html';
+});
+
+// create play button on index.html page
+  let playbtn = "#play";
+  $('play').click(function() {
+    window.location.href = 'index.html';
+});
+
+// create reset button on index.html page
+  let resetbtn = "#reset";
+  $('reset').click(function() {
+    window.location.href = 'index.html';
+});
 
 
-  // create for loop for div circle light classes
-  // $('.container').each(function() {
-  //   $(this).append('<p>')
-  // });
+
+// GAME LOGIC
+/*
+CREATE EMPTY ARRAY FOR STORED TIMES
+
+*/
+
 
 
 
