@@ -102,11 +102,10 @@ Include the full list of features that will be part of your MVP
 
 Include the full list of features that you are considering for POST MVP
 
-- 1 Player
-- Reaction
-- Before lights go off there each will have a random delay
-- Store time data
-- Have the average of time data
+- 2 Players
+- Both players can play and reset when the maximum has been reached 
+- Store one more set of time data
+- Have the average of both time data
 
 ## Functional Components
 
