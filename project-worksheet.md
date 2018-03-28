@@ -30,7 +30,7 @@ So I will be making a quick reaction game. Inspired by both Motorsports racing a
 
 Include images of your wireframes. 
 
-<img src="images/wireframe.jpg">
+<img src='wireframe.jpg'>
 
 ## Priority Matrix
 
