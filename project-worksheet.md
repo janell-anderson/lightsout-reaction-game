@@ -84,9 +84,28 @@ How will the user restart the game once it has been completed.
 
 Include the full list of features that will be part of your MVP 
 
+- 1 player
+- Enter your name (Still deciding)
+- Press enter button to leave landing page to go to main page
+- Press Play to initialize game
+- Lights will turn on one after the other using CSS keyframes and animations
+    - Light will turn off using CSS keyframes, animations and delay.
+    - Delays will be using a random method.
+- Using mouse click events the user will stop a timer that will be counting up by milliseconds
+- Result will be stored in an empty array and user will be able to play again 
+- Once player has tried 4 or 5 times the array will add and divide to find the average speed
+- User click on the restart button to start fresh a new set of time scores.
+
 ## POST MVP
 
 Include the full list of features that you are considering for POST MVP
+
+- 1 Player
+- Reaction
+- Before lights go off there each will have a random delay
+- Store time data
+- Have the average of time data
+
 ## Functional Components
 
 Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method. 
@@ -95,11 +114,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Landing Page | H | 10hrs| 12hrs | 12hrs |
-| # | H | 10hrs| 12hrs | 12hrs |
-| # | H | 10hrs| 12hrs | 12hrs |
-| # | H | 10hrs| 12hrs | 12hrs |
-| Total |  | 10hrs| 12hrs | 12hrs |
+| Landing Page | M | 2 hrs| #hrs | #hrs |
+| HTML & CSS | M | 3 hrs| #hrs | #hrs |
+| Game Logic | H | 13 hrs| #hrs | #hrs |
+| Total |  | 18hrs| #hrs | #hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
