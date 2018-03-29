@@ -1,55 +1,97 @@
+/*
+Referenced flex box from site below
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+/* container is a flex box */
+
 .container {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
 }
 
-@keyframes lightsoff {
+/*// keyframe delay, on and off sequence*/
+/*@keyframes lightsoff {
+  0% {
+
+  }*/
 
 
-}
-.redLightOff1 {
+/*// circles*/
+.circle {
   height: 100px;
   width: 100px;
-  padding-right: 5px;
-  background-color: red;
+  background-color: gray;
   border-radius: 100%;
+
 }
 
-.redLightOff2 {
+/*@keyframes colorchange {
+  0% { background: yellow }
+  100% { background: blue }
+}
+
+.changing {
+  animation: colorchange 2s;
+}*/
+
+/* this is apart of the container which is a flex box */
+.lightsOn {
+  position: relative;
+  width:100%;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.circle {
+  cursor: pointer;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  transition: background .2s linear, border-radius 1s ease-in 1s;
+  width: 95px;
+}
+/*.circle:hover {
+  background: red;
+}*/
+
+
+/*.circle {
   height: 100px;
   width: 100px;
   background-color: red;
   border-radius: 100%;
+}*/
+
+/*// CSS for lights off*/
+/*.oneOff {
+
+}
+.circle .twoOff {
   position: relative;
   left: 100px;
-  bottom: 100px
+  bottom: 100px;
 }
-.redLightOff3 {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  border-radius: 100%;
+.threeOff {
   position: relative;
   left: 200px;
-  bottom: 200px
+  bottom: 200px;
 }
-.redLightOff4 {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  border-radius: 100%;
+.fourOff {
   position: relative;
   left: 300px;
-  bottom: 300px
+  bottom: 300px;
 }
-.redLightOff5 {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  border-radius: 100%;
+.fiveOff {
   position: relative;
   left: 400px;
-  bottom: 400px
-}
+  bottom: 400px;
+}*/
 
-}
+
+
 
