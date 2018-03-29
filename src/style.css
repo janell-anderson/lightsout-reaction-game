@@ -1,9 +1,3 @@
-/*
-Referenced flex box from site below
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-*/
-/* container is a flex box */
-
 .container {
   display: flex;
   justify-content: center;
@@ -11,35 +5,9 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   margin-top: 200px;
 }
 
-/*// keyframe delay, on and off sequence*/
-/*@keyframes lightsoff {
-  0% {
-
-  }*/
-
-
-/*// circles*/
-.circle {
-  height: 100px;
-  width: 100px;
-  background-color: gray;
-  border-radius: 100%;
-
-}
-
-/*@keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
-}
-
-.changing {
-  animation: colorchange 2s;
-}*/
-
-/* this is apart of the container which is a flex box */
 .lightsOn {
   position: relative;
-  width:100%;
+  width: 100%;
   max-width: 520px;
   display: flex;
   justify-content: center;
@@ -47,50 +15,67 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 }
 
-.circle {
-  cursor: pointer;
-  height: 95px;
-  line-height: 95px;
-  text-align: center;
-  transition: background .2s linear, border-radius 1s ease-in 1s;
-  width: 95px;
+@keyframes pulse {
+  50% {
+    background-color: gray;
+  }
+  100% {
+    background-color: red;
+  }
 }
-/*.circle:hover {
-  background: red;
-}*/
 
-
-/*.circle {
+.circle {
   height: 100px;
   width: 100px;
-  background-color: red;
+   /*background-color: gray;*/
   border-radius: 100%;
-}*/
+  animation: pulse 1s both;
+  animation-delay: 1s;
+}
 
-/*// CSS for lights off*/
-/*.oneOff {
+.circle2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  animation: pulse 1.5s 1.5s both;
+  animation-delay: 2s;
+}
 
+.circle3 {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  animation: pulse 2s  2s both;
+  animation-delay: 3s;
 }
-.circle .twoOff {
-  position: relative;
-  left: 100px;
-  bottom: 100px;
+
+.circle4 {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  animation: pulse 2.5s  2.5s both;
+  animation-delay: 4s;
 }
-.threeOff {
-  position: relative;
-  left: 200px;
-  bottom: 200px;
+
+.circle5 {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  animation: pulse 3s  3s both;
+  animation-delay: 5s;
 }
-.fourOff {
-  position: relative;
-  left: 300px;
-  bottom: 300px;
-}
-.fiveOff {
-  position: relative;
-  left: 400px;
-  bottom: 400px;
-}*/
+
+/* .circle:nth-child(1n + 3) {
+  background-color: red;
+} */
+
+/*   @extend .lights;
+   animation: pulse .75s ease-in-out 3.5s both;
+  -webkit-animation: pulse .75s ease-in-out 3.5s both;
+   margin-left: -15px; */
+
+
+
 
 
 
