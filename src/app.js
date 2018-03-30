@@ -6,6 +6,7 @@ let lightsOn = $('.lightsOn');
 let lights =   $( ".lights" );
 let speed = [];
 let time;
+let avg;
 
 // Hides the lights on the initial page until they press "PLAY"
 // Did not use the enter button since the landing page will be on the same html file
@@ -18,43 +19,17 @@ $('.lightsOn').hide();
 //     window.location.href = 'index.html';
 // });
 
-
-// Create event button so player can get time
-// When user clicks on the screen they will get there speed
-// Instead of function addTime immeaditely appearing in console.log
-// I want it to fade out and then have a mouse event
-// to initiate function addTime to grab the milliseconds
-// and place it into the global array called speed
-
-function pressed () {
-
-let m = $( "h1" );
-m.on(function (mousedown) {
-    $( this ).append( "up" );
-  });
-
-  // .mousedown(function() {
-  //   $( this ).append( "down" );
-
-  // });
-
-
-// $('.container').on('mousedown', addTime, function(e){
-//     alert($(this)) // Changed line
-// })​
-
-// $( "body" ).mousedown(function() {
-//   alert( "Handler for .mousedown() called." );
-// });
-
-}
-
-pressed();
-
 // made a h1 tag and class for storing time
 
   let dm = $('h1').attr('class', 'milli');
   $('body').append(dm);
+
+  let para = $('p').attr('class', 'time');
+
+  $('body').append(para);
+  $('stime').append(speed);
+  // $('p').append(speed);
+
 
   let addTime = function() {;
     const d = Date.now();
@@ -72,7 +47,8 @@ pressed();
 function play () {
 
   $('#play').on('click', function() {
- ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime))
+
+  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime));
 
 
  // randomized delay
@@ -83,8 +59,48 @@ function play () {
 }
   play();
 
+// Create event button so player can get time
+// When user clicks on the screen they will get there speed
+// Instead of function addTime immeaditely appearing in console.log
+// It will fade out and then have a mouse event
+// to initiate function addTime to grab the milliseconds
+// and place it into the global array called speed
+
+function pressed () {
+
+// var down = false;
+// $(document).mousedown(function() {
+//     down = true;
+// }).mouseup(function() {
+//     down = false;
+// });
+// $(".lightsOn").mouseout(function() {
+//     if(down) {
+//         console.log("down");
+//     }
+//     else {
+//         console.log("up");
+//     }
+// });
+
+  // .mousedown(function() {
+  //   $( this ).append( "down" );
+
+  // });
 
 
+// $('.container').on('mousedown', addTime, function(e){
+//     alert($(this)) // Changed line
+// })​
+
+// mousedown('click', function() {
+//   ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime))
+//   // alert('hello');
+// });
+
+// }
+}
+pressed();
 
 // create reset button on index.html page
   $('#reset').click(function() {
