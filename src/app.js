@@ -1,9 +1,9 @@
-  /*eslint-env jquery*/
+// eslint-env jquery
 
 $(document).ready(function () {
 
 let lightsOn = $('.lightsOn');
-let lights =   $( ".lights" );
+let lights =   $( '.lights' );
 let speed = [];
 let time;
 let avg;
@@ -23,21 +23,42 @@ $('.lightsOn').hide();
 
   let dm = $('h1').attr('class', 'milli');
   $('body').append(dm);
-
   let para = $('p').attr('class', 'time');
-
   $('body').append(para);
-  $('stime').append(speed);
+  // $('.time').append(speed);
+  // $('time').append(speed);
   // $('p').append(speed);
 
 
-  let addTime = function() {;
-    const d = Date.now();
+  let addTime = function() {
+    const d = performance.now();
     // const m = d.getMilliseconds();
     // e.stopPropagation();
     speed.push(d);
     console.log(speed);
+
+    for ( let i = 0; i < speed.length; i++) {
+        let timeStamps = $('<p>').text(parseInt(speed[i]));
+        $('body').append(timeStamps);
+        // $('.time').append($(speed[i]));
+        // console.log(timeStamps);
+    }
+
+    // $(this).remove();
+    $('.time').text(` ${d}`);
 }
+
+// let storeTime = function() {
+//     $('#play').on('click', function(event){
+//     $(this).remove();
+//       s++;
+//     $('.time').text(` ${addTime}`);
+//   });
+
+// }
+
+// storeTime();
+
 
 // create play button on index.html page
 // When you press play the sequence will start
@@ -47,15 +68,14 @@ $('.lightsOn').hide();
 function play () {
 
   $('#play').on('click', function() {
-
+// return performance.now();
   ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime));
-
-
  // randomized delay
  // Math.ceil(Math.random() * 10000)
  // (Math.floor(Math.random() * 10000))
  // Math.random() * 4000 + 1000
 });
+
 }
   play();
 
