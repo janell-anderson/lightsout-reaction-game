@@ -15,6 +15,12 @@
 
 }
 
+.milli {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes pulse {
   50% {
     background-color: gray;

@@ -13,18 +13,12 @@ let avg;
 // using the .hide() function
 $('.lightsOn').hide();
 
-// create enter button for landing page
-//   const enterbtn = ('#enter');
-//   $('enter').click(function() {
-//     window.location.href = 'index.html';
-// });
-
 // made a h1 tag and class for storing time
 
   let dm = $('h1').attr('class', 'milli');
   $('body').append(dm);
-  let para = $('p').attr('class', 'time');
-  $('body').append(para);
+  // let para = $('p').attr('class', 'time');
+  // $('body').append(para);
   // $('.time').append(speed);
   // $('time').append(speed);
   // $('p').append(speed);
@@ -35,7 +29,11 @@ $('.lightsOn').hide();
     // const m = d.getMilliseconds();
     // e.stopPropagation();
     speed.push(d);
-    console.log(speed);
+    // console.log(speed);
+
+// for loop for every time the player reacts to the lights going off
+// the time will be posted into the empty array named speed
+// and printed out onto the screen
 
     for ( let i = 0; i < speed.length; i++) {
         let timeStamps = $('<p>').text(parseInt(speed[i]));
@@ -46,18 +44,8 @@ $('.lightsOn').hide();
 
     // $(this).remove();
     $('.time').text(` ${d}`);
+
 }
-
-// let storeTime = function() {
-//     $('#play').on('click', function(event){
-//     $(this).remove();
-//       s++;
-//     $('.time').text(` ${addTime}`);
-//   });
-
-// }
-
-// storeTime();
 
 
 // create play button on index.html page
@@ -70,6 +58,7 @@ function play () {
   $('#play').on('click', function() {
 // return performance.now();
   ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime));
+
  // randomized delay
  // Math.ceil(Math.random() * 10000)
  // (Math.floor(Math.random() * 10000))
@@ -85,6 +74,8 @@ function play () {
 // It will fade out and then have a mouse event
 // to initiate function addTime to grab the milliseconds
 // and place it into the global array called speed
+
+
 
 function pressed () {
 
