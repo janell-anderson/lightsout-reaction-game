@@ -5,23 +5,28 @@ $(document).ready(function () {
 let lightsOn = $('.lightsOn');
 let lights =   $( '.lights' );
 let speed = [];
-let time;
+let timeStamps;
+let started = false;
 let avg;
 
-// Hides the lights on the initial page until they press "PLAY"
-// Did not use the enter button since the landing page will be on the same html file
-// using the .hide() function
-$('.lightsOn').hide();
+// made a tags and class for storing time
 
-// made a h1 tag and class for storing time
+  let tb = $('h1').attr('class', 'title');
+  $('body').append(tb);
 
-  let dm = $('h1').attr('class', 'milli');
+  let dm = $('h3').attr('class', 'milli');
   $('body').append(dm);
   // let para = $('p').attr('class', 'time');
   // $('body').append(para);
   // $('.time').append(speed);
   // $('time').append(speed);
   // $('p').append(speed);
+
+// Hides the lights on the initial page until they press "PLAY"
+// Did not use the enter button since the landing page will be on the same html file
+// using the .hide() function
+$('.lightsOn').hide();
+// $('.title').hide();
 
 
   let addTime = function() {
@@ -31,13 +36,21 @@ $('.lightsOn').hide();
     speed.push(d);
     // console.log(speed);
 
-// for loop for every time the player reacts to the lights going off
+// for every time the player reacts to the lights going off
 // the time will be posted into the empty array named speed
 // and printed out onto the screen
 
+    for (let j = 0; j < lightsOn.length; j++) {
+      $('body').on('mousedown', '.lightsOn', function(event) {
+
+    alert('I work');
+
+});
+    }
+
     for ( let i = 0; i < speed.length; i++) {
-        let timeStamps = $('<p>').text(parseInt(speed[i]));
-        $('body').append(timeStamps);
+        let stamps = $('<p>').text(parseInt(speed[i]));
+        $('body').append(stamps);
         // $('.time').append($(speed[i]));
         // console.log(timeStamps);
     }
@@ -75,41 +88,8 @@ function play () {
 // to initiate function addTime to grab the milliseconds
 // and place it into the global array called speed
 
-
-
 function pressed () {
 
-// var down = false;
-// $(document).mousedown(function() {
-//     down = true;
-// }).mouseup(function() {
-//     down = false;
-// });
-// $(".lightsOn").mouseout(function() {
-//     if(down) {
-//         console.log("down");
-//     }
-//     else {
-//         console.log("up");
-//     }
-// });
-
-  // .mousedown(function() {
-  //   $( this ).append( "down" );
-
-  // });
-
-
-// $('.container').on('mousedown', addTime, function(e){
-//     alert($(this)) // Changed line
-// })​
-
-// mousedown('click', function() {
-//   ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime))
-//   // alert('hello');
-// });
-
-// }
 }
 pressed();
 
