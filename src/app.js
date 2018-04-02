@@ -38,11 +38,13 @@ $(document).ready(() => {
     // and printed out onto the screen
     // parseInt takes a string and turns it into a integer
 
+
     for (let i = 0; i < speed.length; i++) {
       const stamps = $('<p>').text(parseInt(speed[i]));
       $('body').append(stamps);
+      // $('.text').text('');
     }
-
+    // $('<p>').text('');
     $('.time').text(`${d}`); // prints out the time that is selected
     return d; // returns performance.now data
   };
@@ -56,6 +58,11 @@ $(document).ready(() => {
 
   // const timeout = 0;
   d = performance.now()
+
+  // function countDown starts a setInterval from 1
+  // it decrements every 1 second (1000)
+  // have a global variable called count which starts at 13
+  // 13 is the total of the .lightsOn delay,fadeIn,delay,fadeOut
 
   function countDown (){
     // let count = 10;
@@ -89,8 +96,6 @@ $(document).ready(() => {
         .fadeOut(1000, pressed));
 
 
-      // ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, (Math.random(addTime))));
-
       // randomized delay
       // Math.ceil(Math.random() * 10000)
       // (Math.floor(Math.random() * 10000))
@@ -100,17 +105,13 @@ $(document).ready(() => {
 
   play();
 
-  // function seq () {
-  //         ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000)
-  //       .fadeOut(1000, pressed));
-  // }
-  // seq();
-
   // Create event button so player can get time
   // When user clicks on the screen they will get there speed
   // Instead of function addTime immeaditely appearing in console.log
   // have a button to initiate function addTime to grab the milliseconds
   // and place it into the global array called speed
+  // has an if statement if the counter is greater then 0 it is a jump start
+  // else it will place the time
 
   function pressed() {
     $('#action').on('click', () => {
