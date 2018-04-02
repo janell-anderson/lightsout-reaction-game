@@ -66,6 +66,15 @@ p {
   color: red;
 }
 
+#action {
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 100%;
+}
+
+#action:hover {
+  color: red;
+}
 
 @keyframes pulse {
   50% {
