@@ -5,9 +5,10 @@ $(document).ready(function () {
 let lightsOn = $('.lightsOn');
 // let lights =   $( '.lights' );
 let speed = [];
-let timeout = 0;
-let p1;
-let avg;
+let d;
+// let timeout = 0;
+// let p1;
+// let avg;
 
 // made a tags and class for storing time
 
@@ -16,21 +17,17 @@ let avg;
 
   let dm = $('h3').attr('class', 'milli');
   $('body').append(dm);
-  // let para = $('p').attr('class', 'time');
-  // $('body').append(para);
-  // $('.time').append(speed);
-  // $('time').append(speed);
-  // $('p').append(speed);
+
 
 // Hides the lights on the initial page until they press "PLAY"
 // Did not use the enter button since the landing page will be on the same html file
 // using the .hide() function
 $('.lightsOn').hide();
-// $('.title').hide();
+
 
 
   let addTime = function() {
-    let d = performance.now(); //
+    d = performance.now();
     speed.push(d);
 
 
@@ -44,7 +41,6 @@ $('.lightsOn').hide();
         $('body').append(stamps);
     }
 
-    // $(this).remove();
     $('.time').text(` ${d}`); // prints out the time that is selected
     return d; // returns performance.now data
 }
@@ -53,20 +49,19 @@ $('.lightsOn').hide();
 // create play button on index.html page
 // When you press play the sequence will start
 // after sequence has faded in it will then fade out at random instances
-// remember to put e into the function();
-
-let randomFade = Math.floor(Math.random() * 10000);
 
 function play () {
 
   $('#play').on('click', function() {
-// return performance.now();
 
-  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000));
+  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(1000, addTime));
 
-     if (Math.floor(Math.random() > 0.5 )) {
-      $('.lightsOn').fadeOut(1000);
-   }
+ // if ( d < fadeOut())
+
+   //   if (Math.floor(Math.random() )) {
+   //    $('.lightsOn').fadeOut(500, addTime);
+   // }
+   // console.log(lightsOn);
 
   // setTimeout(function(){
   //     ($('.circle').fadeOut(500, addTime));
@@ -100,14 +95,16 @@ function play () {
 
 function pressed () {
 
+ let timeout = 0;
 
  $('.container').on('click', function() {
-  alert(addTime());
+  // alert(addTime());
 });
+
 
  if (!timeout) {
    $('.container').on('click', function() {
-  timeout.textContent = "jump start";
+  timeout.textContent = alert('jumpstart');
  });
 
 }
