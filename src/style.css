@@ -1,5 +1,9 @@
+body {
+  font-family: sans-serif;
 
-.title {
+}
+
+h1 {
   display: flex;
   justify-content: center;
  text-align: center;
@@ -10,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .lightsOn {
@@ -27,6 +31,7 @@
     display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
 }
 
 p {
@@ -39,8 +44,28 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
 }
+
+#play {
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 100%;
+}
+
+#play:hover {
+  color: red;
+}
+
+#reset {
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 100%;
+}
+
+#reset:hover {
+  color: red;
+}
+
 
 @keyframes pulse {
   50% {
@@ -52,8 +77,8 @@ p {
 }
 
 .circle {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
    /*background-color: gray;*/
   border-radius: 100%;
   animation: pulse 1s both;
@@ -61,32 +86,32 @@ p {
 }
 
 .circle2 {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 100%;
   animation: pulse 1.5s 1.5s both;
   animation-delay: 2s;
 }
 
 .circle3 {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 100%;
   animation: pulse 2s  2s both;
   animation-delay: 3s;
 }
 
 .circle4 {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 100%;
   animation: pulse 2.5s  2.5s both;
   animation-delay: 4s;
 }
 
 .circle5 {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 100%;
   animation: pulse 3s  3s both;
   animation-delay: 5s;

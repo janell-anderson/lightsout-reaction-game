@@ -3,16 +3,16 @@
 $(document).ready(function () {
 
 let lightsOn = $('.lightsOn');
-let lights =   $( '.lights' );
+// let lights =   $( '.lights' );
 let speed = [];
-let timeStamps;
-let started = false;
+let timeout = 0;
+let p1;
 let avg;
 
 // made a tags and class for storing time
 
-  let tb = $('h1').attr('class', 'title');
-  $('body').append(tb);
+  // let tb = $('h1').attr('class', 'title');
+  // $('body').append(tb);
 
   let dm = $('h3').attr('class', 'milli');
   $('body').append(dm);
@@ -30,34 +30,23 @@ $('.lightsOn').hide();
 
 
   let addTime = function() {
-    const d = performance.now();
-    // const m = d.getMilliseconds();
-    // e.stopPropagation();
+    let d = performance.now(); //
     speed.push(d);
-    // console.log(speed);
+
 
 // for every time the player reacts to the lights going off
 // the time will be posted into the empty array named speed
 // and printed out onto the screen
-
-    for (let j = 0; j < lightsOn.length; j++) {
-      $('body').on('mousedown', '.lightsOn', function(event) {
-
-    alert('I work');
-
-});
-    }
+// parseInt takes a string and turns it into a integer
 
     for ( let i = 0; i < speed.length; i++) {
         let stamps = $('<p>').text(parseInt(speed[i]));
         $('body').append(stamps);
-        // $('.time').append($(speed[i]));
-        // console.log(timeStamps);
     }
 
     // $(this).remove();
-    $('.time').text(` ${d}`);
-
+    $('.time').text(` ${d}`); // prints out the time that is selected
+    return d; // returns performance.now data
 }
 
 
@@ -66,11 +55,30 @@ $('.lightsOn').hide();
 // after sequence has faded in it will then fade out at random instances
 // remember to put e into the function();
 
+let randomFade = Math.floor(Math.random() * 10000);
+
 function play () {
 
   $('#play').on('click', function() {
 // return performance.now();
-  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, addTime));
+
+  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000));
+
+     if (Math.floor(Math.random() > 0.5 )) {
+      $('.lightsOn').fadeOut(1000);
+   }
+
+  // setTimeout(function(){
+  //     ($('.circle').fadeOut(500, addTime));
+
+  // }, 10000);
+  // ($('.circle2').fadeOut(500, addTime, randomFade));
+  // ($('.circle3').fadeOut(500, addTime, randomFade));
+  // ($('.circle4').fadeOut(500, addTime, randomFade));
+
+
+
+  // ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, (Math.random(addTime))));
 
  // randomized delay
  // Math.ceil(Math.random() * 10000)
@@ -81,6 +89,8 @@ function play () {
 }
   play();
 
+
+
 // Create event button so player can get time
 // When user clicks on the screen they will get there speed
 // Instead of function addTime immeaditely appearing in console.log
@@ -90,8 +100,19 @@ function play () {
 
 function pressed () {
 
+
+ $('.container').on('click', function() {
+  alert(addTime());
+});
+
+ if (!timeout) {
+   $('.container').on('click', function() {
+  timeout.textContent = "jump start";
+ });
+
 }
-pressed();
+}
+  pressed();
 
 // create reset button on index.html page
   $('#reset').click(function() {
