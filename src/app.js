@@ -5,6 +5,7 @@ $(document).ready(() => {
   // let lights =   $( '.lights' );
   const speed = [];
   let d;
+  let count = 13;
   // let clickReact;
   // let timeout = 0;
   // let p1;
@@ -53,25 +54,36 @@ $(document).ready(() => {
   // timeout const detects if the player pressed the action button before sequence finished.
   // if so they will have to press play button again
 
-  const timeout = 0;
+  // const timeout = 0;
+  d = performance.now()
+
+  function countDown (){
+    // let count = 10;
+    setInterval(function() {
+      count--;
+      return count;
+    }, 1000);
+  }
+
 
   function play() {
     $('#play').on('click', () => {
-      if (timeout < 1) {
-        $('.container').on('click', () => {
-          alert('You jumpstarted');
+      countDown();
+        // $('#action').on('click', () => {
+
+
+          // $('.circle').removeClass('.lightsOn');
+          // alert('You jumpstarted');
 
           // return reset();
-        });
-      }
+        // });
+
       // else if (timeout > ) {
       //   $('#action').on('click', () => {
       //     alert(addTime());
       //     // return addTime();
       //   });
       // }
-
-
 
       ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000)
         .fadeOut(1000, pressed));
@@ -88,6 +100,12 @@ $(document).ready(() => {
 
   play();
 
+  // function seq () {
+  //         ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000)
+  //       .fadeOut(1000, pressed));
+  // }
+  // seq();
+
   // Create event button so player can get time
   // When user clicks on the screen they will get there speed
   // Instead of function addTime immeaditely appearing in console.log
@@ -96,8 +114,11 @@ $(document).ready(() => {
 
   function pressed() {
     $('#action').on('click', () => {
-      alert(addTime());
-      // return addTime();
+      if (count > 0 ) {
+      alert("You jumpstarted");
+      } else {
+        alert(addTime());
+      }
     });
   }
   pressed();
