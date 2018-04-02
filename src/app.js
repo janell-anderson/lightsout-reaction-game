@@ -6,6 +6,7 @@ let lightsOn = $('.lightsOn');
 // let lights =   $( '.lights' );
 let speed = [];
 let d;
+let clickReact;
 // let timeout = 0;
 // let p1;
 // let avg;
@@ -14,8 +15,9 @@ let d;
 
   // let tb = $('h1').attr('class', 'title');
   // $('body').append(tb);
-
+let name = prompt("What's your name?");
   let dm = $('h3').attr('class', 'milli');
+  $('h3').text(name + " Stored Time");
   $('body').append(dm);
 
 
@@ -23,7 +25,6 @@ let d;
 // Did not use the enter button since the landing page will be on the same html file
 // using the .hide() function
 $('.lightsOn').hide();
-
 
 
   let addTime = function() {
@@ -41,7 +42,7 @@ $('.lightsOn').hide();
         $('body').append(stamps);
     }
 
-    $('.time').text(` ${d}`); // prints out the time that is selected
+    $('.time').text(`${ d}`); // prints out the time that is selected
     return d; // returns performance.now data
 }
 
@@ -50,27 +51,21 @@ $('.lightsOn').hide();
 // When you press play the sequence will start
 // after sequence has faded in it will then fade out at random instances
 
+     let timeout = 0;
+
 function play () {
 
   $('#play').on('click', function() {
 
-  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(1000, addTime));
+      if (!timeout) {
+   $('.container').on('click', function() {
+  alert('jumpstart');
 
- // if ( d < fadeOut())
+ });
+}
 
-   //   if (Math.floor(Math.random() )) {
-   //    $('.lightsOn').fadeOut(500, addTime);
-   // }
-   // console.log(lightsOn);
 
-  // setTimeout(function(){
-  //     ($('.circle').fadeOut(500, addTime));
-
-  // }, 10000);
-  // ($('.circle2').fadeOut(500, addTime, randomFade));
-  // ($('.circle3').fadeOut(500, addTime, randomFade));
-  // ($('.circle4').fadeOut(500, addTime, randomFade));
-
+  ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(1000, pressed));
 
 
   // ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000).fadeOut(500, (Math.random(addTime))));
@@ -80,8 +75,8 @@ function play () {
  // (Math.floor(Math.random() * 10000))
  // Math.random() * 4000 + 1000
 });
+ }
 
-}
   play();
 
 
@@ -95,24 +90,27 @@ function play () {
 
 function pressed () {
 
- let timeout = 0;
+  // addTime();
+ // let timeout = 0;
 
- $('.container').on('click', function() {
-  // alert(addTime());
+ $('body').on('click', function() {
+  alert(addTime());
 });
 
+//  if (!timeout) {
+//    $('.container').on('click', function() {
+//   timeout.textContent = alert('jumpstart');
+//  });
 
- if (!timeout) {
-   $('.container').on('click', function() {
-  timeout.textContent = alert('jumpstart');
- });
-
+// }
 }
-}
-  pressed();
+  // pressed();
 
 // create reset button on index.html page
+function reset () {
   $('#reset').click(function() {
     window.location.href = 'index.html';
 });
+}
+reset();
   });
