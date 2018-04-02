@@ -87,16 +87,16 @@ How will the user restart the game once it has been completed.
 Include the full list of features that will be part of your MVP 
 
 - 1 player
-- Enter your name (Still deciding)
-- Press enter button to leave landing page to go to main page
+- Enter your name (Still deciding) - COMPLETE
+- Press enter button to leave landing page to go to main page -CHANGED BUT COMPLETE
 - Press Play to initialize game - COMPLETED
 - Lights will turn on one after the other using CSS keyframes and animations
     - Light will turn off using CSS keyframes, animations and delay. - COMPLETED
-    - Delays will be using a random method.
+    - Delays will be using a random method. INCOMPLETE
 - Using mouse click events the user will stop a timer that will be counting up by milliseconds
-- Result will be stored in an empty array and user will be able to play again - INCOMPLETE
+- Result will be stored in an empty array and user will be able to play again - COMPLETE
 - Once player has tried 4 or 5 times the array will add and divide to find the average speed
-- User click on the restart button to start fresh a new set of time scores. - INCOMPLETE
+- User click on the restart button to start fresh a new set of time scores. - COMPLETE
 
 ## POST MVP
 

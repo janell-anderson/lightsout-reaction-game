@@ -29,23 +29,23 @@ $(document).ready(() => {
 
 
   const addTime = function () {
-    d = performance.now();
+    d = Date.now();
     speed.push(d);
-
+    // let dup = [];
 
     // for every time the player reacts to the lights going off
     // the time will be posted into the empty array named speed
     // and printed out onto the screen
     // parseInt takes a string and turns it into a integer
 
+    const stamps = $('<p>').text(parseInt(speed[0]));
+       $('body').append(stamps);
 
-    for (let i = 0; i < speed.length; i++) {
-      const stamps = $('<p>').text(parseInt(speed[i]));
-      $('body').append(stamps);
-      // $('.text').text('');
-    }
-    // $('<p>').text('');
-    $('.time').text(`${d}`); // prints out the time that is selected
+    // for (let i = 0; i < speed.length; i++) {
+    //   const stamps = $('<p>').text(parseInt(speed[i]));
+    //   $('body').append(stamps);
+   // }
+    $('.time').text(`${speed}`); // prints out the time that is selected
     return d; // returns performance.now data
   };
 
@@ -56,7 +56,6 @@ $(document).ready(() => {
   // timeout const detects if the player pressed the action button before sequence finished.
   // if so they will have to press play button again
 
-  // const timeout = 0;
   d = performance.now()
 
   // function countDown starts a setInterval from 1
@@ -76,21 +75,6 @@ $(document).ready(() => {
   function play() {
     $('#play').on('click', () => {
       countDown();
-        // $('#action').on('click', () => {
-
-
-          // $('.circle').removeClass('.lightsOn');
-          // alert('You jumpstarted');
-
-          // return reset();
-        // });
-
-      // else if (timeout > ) {
-      //   $('#action').on('click', () => {
-      //     alert(addTime());
-      //     // return addTime();
-      //   });
-      // }
 
       ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000)
         .fadeOut(1000, pressed));
