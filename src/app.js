@@ -1,7 +1,7 @@
 // eslint-env jquery
 
 $(document).ready(() => {
-  // const lightsOn = $('.lightsOn');
+  const lightsOn = $('.lightsOn');
   // let lights =   $( '.lights' );
   const speed = [];
   let d;
@@ -14,6 +14,7 @@ $(document).ready(() => {
 
   // let tb = $('h1').attr('class', 'title');
   // $('body').append(tb);
+  const rules = alert('RULES: 1) Press Play initiate game. 2) Press Action button once the light fades out. 3) Press Reset to start over ');
   const name = prompt("What's your name?");
   const dm = $('h3').attr('class', 'milli');
   $('h3').text(`${name} Stored Time`);
@@ -56,11 +57,20 @@ $(document).ready(() => {
 
   function play() {
     $('#play').on('click', () => {
-      if (!timeout) {
+      if (timeout < 1) {
         $('.container').on('click', () => {
-          alert('jumpstart');
+          alert('You jumpstarted');
+
+          // return reset();
         });
       }
+      // else if (timeout > ) {
+      //   $('#action').on('click', () => {
+      //     alert(addTime());
+      //     // return addTime();
+      //   });
+      // }
+
 
 
       ($('.lightsOn').delay(1000).fadeIn(1000).delay(10000)
