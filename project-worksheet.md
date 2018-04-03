@@ -115,10 +115,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Game Logic | H | 13 hrs| #hrs | #hrs |
-| Landing Page | M | 2 hrs| #hrs | #hrs |
-| HTML & CSS | M | 3 hrs| #hrs | #hrs |
-| Total |  | 18hrs| #hrs | #hrs |
+| Game Logic | H | 13 hrs| 20hrs | 20hrs |
+| Landing/prompt Page | M | 2 hrs| 1hrs | 1hrs |
+| HTML & CSS | M | 3 hrs| 2hrs | 2hrs |
+| Total |  | 18hrs| 23hrs | 23hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
@@ -130,12 +130,38 @@ Helper functions should be generic enought that they can be reused in other appl
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
 
+ <a href="https://developer.mozilla.org/en-US/">MDN</a>
+ <a href="https://stackoverflow.com/">Stackoverflow</a>
+
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  
+I'm pretty much proud of the code below. I was able to get a button that I wanted instead of using a mouse event listener since that idea was not going to work. I wanted to allow the button to have two functions. If the player jumpstarted there would be an alert. If not, they would be able to continue on. I was having issues with using the right game logic but a classmate came around and we combined our brains to come up with the code below!
+
+  function countDown() {
+    // let count = 10;
+    setInterval(() => {
+      count--;
+      return count;
+    }, 1000);
+  }
+
+    function pressed() {
+    $('#action').on('click', () => {
+      if (count > 0) {
+        alert('You jumpstarted');
+      } else {
+        alert(addTime());
+      }
+    });
+  }
+  pressed();
 
 ## jQuery Discoveries
- Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
+ - window.location.href
+ - setInterval
+ - Date.now
+ - performance.now
+
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  

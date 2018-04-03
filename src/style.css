@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-
+  background-color:  #fff4e6;
 }
 
 h1 {
@@ -50,6 +50,7 @@ p {
     font-size: 15px;
     padding: 10px 24px;
     border-radius: 100%;
+    border: 4px groove silver;
 }
 
 #play:hover {
@@ -60,6 +61,7 @@ p {
     font-size: 15px;
     padding: 10px 24px;
     border-radius: 100%;
+    border: 4px groove silver;
 }
 
 #reset:hover {
@@ -70,6 +72,7 @@ p {
     font-size: 15px;
     padding: 10px 24px;
     border-radius: 100%;
+    border: 4px groove silver;
 }
 
 #action:hover {

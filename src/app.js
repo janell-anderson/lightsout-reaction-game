@@ -15,7 +15,7 @@ $(document).ready(() => {
 
   // let tb = $('h1').attr('class', 'title');
   // $('body').append(tb);
-  const rules = alert('RULES: 1) Press Play initiate game. 2) Press Action button once the light fades out. 3) Press Reset to start over ');
+  const rules = alert('RULES: 1) Press Play initiate game. 2) Press Action button once the light fades out. If you do not there will be a jumpstart. 3) Press Reset to start over ');
   const name = prompt("What's your name?");
   const dm = $('h3').attr('class', 'milli');
   $('h3').text(`${name} Stored Time`);
@@ -29,9 +29,8 @@ $(document).ready(() => {
 
 
   const addTime = function () {
-    d = Date.now();
+    d = performance.now();
     speed.push(d);
-    // let dup = [];
 
     // for every time the player reacts to the lights going off
     // the time will be posted into the empty array named speed
@@ -39,12 +38,7 @@ $(document).ready(() => {
     // parseInt takes a string and turns it into a integer
 
     const stamps = $('<p>').text(parseInt(speed[0]));
-       $('body').append(stamps);
-
-    // for (let i = 0; i < speed.length; i++) {
-    //   const stamps = $('<p>').text(parseInt(speed[i]));
-    //   $('body').append(stamps);
-   // }
+    $('body').append(stamps);
     $('.time').text(`${speed}`); // prints out the time that is selected
     return d; // returns performance.now data
   };
@@ -56,16 +50,16 @@ $(document).ready(() => {
   // timeout const detects if the player pressed the action button before sequence finished.
   // if so they will have to press play button again
 
-  d = performance.now()
+  d = performance.now();
 
   // function countDown starts a setInterval from 1
   // it decrements every 1 second (1000)
   // have a global variable called count which starts at 13
   // 13 is the total of the .lightsOn delay,fadeIn,delay,fadeOut
 
-  function countDown (){
+  function countDown() {
     // let count = 10;
-    setInterval(function() {
+    setInterval(() => {
       count--;
       return count;
     }, 1000);
@@ -99,8 +93,8 @@ $(document).ready(() => {
 
   function pressed() {
     $('#action').on('click', () => {
-      if (count > 0 ) {
-      alert("You jumpstarted");
+      if (count > 0) {
+        alert('You jumpstarted');
       } else {
         alert(addTime());
       }
